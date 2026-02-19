@@ -38,22 +38,59 @@ Python uses duck typing, meaning the type or class of an object is less importan
 ### 0. Basic annotations - add
 **File:** `0-add.py`
 
-Write a type-annotated function `add` that:
-- Takes two float arguments: `a` and `b`
-- Returns their sum as a float
+Write a type-annotated function `add` that takes two float arguments and returns their sum as a float.
 
-**Example:**
+### 1. Basic annotations - concat
+**File:** `1-concat.py`
+
+Write a type-annotated function `concat` that takes two strings and returns their concatenation.
+
+### 2. Basic annotations - floor
+**File:** `2-floor.py`
+
+Write a type-annotated function `floor` that takes a float and returns its floor as an integer.
+
+### 3. Basic annotations - to string
+**File:** `3-to_str.py`
+
+Write a type-annotated function `to_str` that takes a float and returns its string representation.
+
+### 4. Define variables
+**File:** `4-define_variables.py`
+
+Define and annotate the following variables with the specified values:
+- `a`: an integer with value 1
+- `pi`: a float with value 3.14
+- `i_understand_annotations`: a boolean with value True
+- `school`: a string with value "Holberton"
+
+### 5. Complex types - list of floats
+**File:** `5-sum_list.py`
+
+Write a type-annotated function `sum_list` that takes a list of floats and returns their sum as a float.
+
+### 6. Complex types - mixed list
+**File:** `6-sum_mixed_list.py`
+
+Write a type-annotated function `sum_mixed_list` that takes a list of integers and floats and returns their sum as a float.
+
+### 7. Complex types - string and int/float to tuple
+**File:** `7-to_kv.py`
+
+Write a type-annotated function `to_kv` that takes a string and an int or float, and returns a tuple where the first element is the string and the second is the square of the int/float as a float.
+
+### 8. Complex types - functions
+**File:** `8-make_multiplier.py`
+
+Write a type-annotated function `make_multiplier` that takes a float multiplier and returns a function that multiplies a float by multiplier.
+
+### 9. Let's duck type an iterable object
+**File:** `9-element_length.py`
+
+Annotate the function's parameters and return values with appropriate types:
 ```python
-add = __import__('0-add').add
-
-print(add(1.11, 2.22) == 1.11 + 2.22)
-print(add.__annotations__)
-```
-
-**Expected output:**
-```
-True
-{'a': <class 'float'>, 'b': <class 'float'>, 'return': <class 'float'>}
+def element_length(lst):
+    return [(i, len(i)) for i in lst]
 ```
 
 ## Resources
