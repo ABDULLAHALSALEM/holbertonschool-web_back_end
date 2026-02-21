@@ -9,16 +9,14 @@ from typing import Generator
 
 async def async_generator() -> Generator[float, None, None]:
     """
-    Asynchronous generator that produces 10 random floating-point numbers.
+    Asynchronous generator that yields 10 random numbers.
 
-    This coroutine iterates 10 times. On each iteration, it:
-        1. Asynchronously waits for 1 second
-        2. Yields a random float between 0 and 10
+    Loops 10 times, each time asynchronously waits 1 second,
+    then yields a random number between 0 and 10.
 
     Yields:
-        float: A random number in the range [0, 10)
+        Random float between 0 and 10
     """
     for _ in range(10):
         await asyncio.sleep(1)
         yield random.uniform(0, 10)
-        

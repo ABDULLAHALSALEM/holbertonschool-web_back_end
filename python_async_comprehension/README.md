@@ -45,5 +45,3 @@ async def print_yielded_values():
 asyncio.run(print_yielded_values())
 ```
 
-## Author
-Holberton School Project
