@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """
-Simple helper function for pagination
+Return the dataset loaded from the CSV file and cache it.
 """
 
 
 import csv
-from typing import List, Tuple
+from typing import List
 
-
-def index_range(page: int, page_size: int) -> Tuple[int, int]:
+def index_range(page: int, page_size: int) -> tuple:
     """Return start and end index for a pagination page."""
     start = (page - 1) * page_size
-    end = start + page_size
+    end = page * page_size
     return (start, end)
 
 
